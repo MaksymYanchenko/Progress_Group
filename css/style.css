@@ -140,7 +140,7 @@ body {
 
 @media (max-width: 410px) {
     .menu__link {
-        font-size: 9px;
+        font-size: 14px;
         color: #fab702;
     }
     .menu__list {
@@ -150,7 +150,7 @@ body {
 
 @media (max-width: 390px) {
     .menu__link {
-        font-size: 9px;
+        font-size: 14px;
         color: #fab702;
     }
     .menu__list {
