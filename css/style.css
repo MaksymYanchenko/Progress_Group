@@ -148,6 +148,16 @@ body {
     }
 }
 
+@media (max-width: 390px) {
+    .menu__link {
+        font-size: 9px;
+        color: #fab702;
+    }
+    .menu__list {
+    
+    }
+}
+
 /*-------------------------------------PAGE----------------------------------------------------*/
 .page {
     flex: 1 1 auto;
