@@ -143,18 +143,12 @@ body {
         font-size: 14px;
         color: #fab702;
     }
-    .menu__list {
-    
-    }
 }
 
 @media (max-width: 390px) {
     .menu__link {
         font-size: 14px;
         color: #fab702;
-    }
-    .menu__list {
-    
     }
 }
 
@@ -1476,13 +1470,16 @@ textarea.form__input {
 
 .contacts-footer__item_phone {
     background: url('..//img/footer/icons/01.svg') 0 0 no-repeat;
+    padding-bottom: 12px;
 }
 
 .contacts-footer__item_map {
     background: url('..//img/footer/icons/02.svg') 0 0 no-repeat;
+    padding-bottom: 12px;
 }
 .contacts-footer__item_email {
     background: url('..//img/footer/icons/03.svg') 0 0 no-repeat;
+    padding-bottom: 12px;
 }
 
 .footer__bottom {
