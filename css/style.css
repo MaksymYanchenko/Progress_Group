@@ -204,18 +204,6 @@ body {
     }
 }
 
-/*------------------------------------TRANSLATE-----------------------------------------------------------*/
-
-.translate {
-    max-width: 30px;
-    max-height: 20px;
-}
-
-.lang {
-    background: transparent;
-    border: none;
-    margin: 3px 20px 0px 0px;
-}
 
 /*-------------------------------------MAIN-BLOCK---------------------------------------------------------------------*/
 .main-block {
@@ -249,7 +237,7 @@ body {
 }
 @media (max-width: 479px) {
     .main-block__title {
-        font-size: 42px;
+        font-size: 32px;
         color: #fab702;
     }
 }
