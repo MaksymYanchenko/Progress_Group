@@ -24,7 +24,7 @@
 	}
 
 	//Тело письма
-	$body = '<h1>You selected this project!</h1>';
+	$body = 'You selected this project!';
 	
 	if(trim(!empty($_POST['name']))){
 		$body.='<p><strong>Name:</strong> '.$_POST['name'].'</p>';
