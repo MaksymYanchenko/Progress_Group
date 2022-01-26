@@ -18,7 +18,6 @@
 
 
         <header class="header">
-            <!--Создаем ограничивающий контейнер-->
             <div class="header__container _container">
                 <a href="" class="header__logo">
                     <img src="img/mainblock/logo.png" alt="Progress Group">
@@ -241,9 +240,6 @@
 
 
             <div class="page__slider">
-                <!-- Контент -->
-
-
 
                 <div class="slider">
                     <div class="slider__item filter">
@@ -287,21 +283,21 @@
 
 
 
-                <form id="form" class="form__page">
+                <form class="form__page">
                     <div class="form__container _container">
-                        <form action="#" id="form" class="form__body">
-                            <h1 class="form__title">УЗНАЙ ЦЕНУ ПРОЕКТА:</h1>
+                        <h1 class="form__title">УЗНАЙ ЦЕНУ ПРОЕКТА:</h1>
+                        <form id="mailForm" class="form__body">
                             <div class="form__item">
                                 <label for="formName" class="form__label">ИМЯ*:</label>
-                                <input id="formName" type="text" name="name" class="form__input _req">
+                                <input id="name" type="text" name="name" class="form__input _req">
                             </div>
                             <div class="form__item">
                                 <label for="formEmail" class="form__label">ЭЛ. ПОЧТА*:</label>
-                                <input id="formEmail" type="text" name="email" class="form__input _req _email">
+                                <input id="email" type="email" name="email" class="form__input _req _email">
                             </div>
                             <div class="form__item">
                                 <label for="formPhone" class="form__label">ТЕЛЕФОН*:</label>
-                                <input id="formPhone" type="number" name="phone" class="form__input _req _phone">
+                                <input id="phone" type="phone" name="phone" class="form__input _req _phone">
                             </div>
                             <div class="form__item">
                                 <div class="form__label">КАК СВЯЗАТЬСЯ?</div>
@@ -322,7 +318,7 @@
                             </div>
                             <div class="form__item">
                                 <label for="formMessage" class="form__label">СООБЩЕНИЕ:</label>
-                                <textarea name="message" id="formMessage" class="form__input"></textarea>
+                                <textarea name="message" id="message" class="form__input"></textarea>
                             </div>
                             <div class="form__item">
                                 <div class="form__label">ВЫБЕРИ ПРОЕКТ:</div>
@@ -331,17 +327,6 @@
                                     <option value="улучшенный">ЗАКРЫТЫЙ</option>
                                     <option value="люкс">РАЗРАБОТЧИК</option>
                                 </select>
-                            </div>
-                            <div class="form__item">
-                                <div class="form__label">ПРИКРЕПИТЬ ФОТО:</div>
-                                <div class="file">
-                                    <div class="file__item">
-                                        <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image"
-                                            class="file__input">
-                                        <div class="file__button">ВЫБРАТЬ</div>
-                                    </div>
-                                    <div id="formPreview" class="file__preview"></div>
-                                </div>
                             </div>
                             <div class="form__item">
                                 <div class="checkbox">
@@ -354,8 +339,10 @@
                                             удалены после отправки оценки.</span></label>
                                 </div>
                             </div>
-                            <button type="submit" class="form__button">ВЫСЛАТЬ</button>
+                            <button type="button" id="sendMail" class="form__button">ВЫСЛАТЬ</button>
                         </form>
+                        <br>
+                        <div id="errorMess"></div>
                     </div>
                 </form>
 
@@ -450,9 +437,9 @@
                             <h4 class="subscribe__title">Оставте нам свой отзыв.<br>Каждая деталь важна для нашей
                                 команды!</h4>
                             <form action="#" class="subscribe__form">
-                                <input autocomplete="off" type="email" required name="form[]" placeholder="Ваш отзыв..."
+                                <input autocomplete="off" type="text" required name="form[]" placeholder="Ваш отзыв..."
                                     class="subscribe__input">
-                                <button type="submit" class="subscribe__button">ВЫСЛАТЬ</button>
+                                <button type="submit" class="subscribe__button">Отправить</button>
                             </form>
                         </div>
                     </div>
@@ -617,14 +604,11 @@
     </div>
 
 
-    <!-- Подключаем jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!-- Подключаем слайдер Slick -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <!-- Подключаем Select -->
     <script src="js/select.js"></script>
-    <!-- Подключаем файл скриптов -->
     <script src="js/script.js"></script>
+    <script src="js/formMail.js"></script>
 </body>
 
 </html>

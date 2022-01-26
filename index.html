@@ -241,9 +241,6 @@
 
 
             <div class="page__slider">
-                <!-- Контент -->
-
-
 
                 <div class="slider">
                     <div class="slider__item filter">
@@ -286,22 +283,21 @@
 
 
 
-
-                <form id="form" class="form__page">
+                <div class="form__page">
                     <div class="form__container _container">
-                        <form action="#" id="form" class="form__body">
-                            <h1 class="form__title">WYCEŃ SWÓJ PROJEKT:</h1>
+                        <h1 class="form__title">WYCEŃ SWÓJ PROJEKT:</h1>
+                        <form id="mailForm" class="form__body">
                             <div class="form__item">
                                 <label for="formName" class="form__label">IMIĘ*:</label>
-                                <input id="formName" type="text" name="name" class="form__input _req">
+                                <input id="name" type="text" name="name" class="form__input _req">
                             </div>
                             <div class="form__item">
                                 <label for="formEmail" class="form__label">E-MAIL*:</label>
-                                <input id="formEmail" type="text" name="email" class="form__input _req _email">
+                                <input id="email" type="email" name="email" class="form__input _req _email">
                             </div>
                             <div class="form__item">
                                 <label for="formPhone" class="form__label">NUMER TEL.:</label>
-                                <input id="formPhone" type="number" name="phone" class="form__input _req _phone">
+                                <input id="phone" type="phone" name="phone" class="form__input _req _phone">
                             </div>
                             <div class="form__item">
                                 <div class="form__label">JAK ZKONTAKTOWAĆ?</div>
@@ -321,7 +317,7 @@
                             </div>
                             <div class="form__item">
                                 <label for="formMessage" class="form__label">WIADOMOŚĆ:</label>
-                                <textarea name="message" id="formMessage" class="form__input"></textarea>
+                                <textarea name="message" id="message" class="form__input"></textarea>
                             </div>
                             <div class="form__item">
                                 <div class="form__label">WYBIERŻ PROJEKT:</div>
@@ -330,17 +326,6 @@
                                     <option value="улучшенный">SUROWY ZAMKNIĘTY</option>
                                     <option value="люкс">DEWELOPERSKI</option>
                                 </select>
-                            </div>
-                            <div class="form__item">
-                                <div class="form__label">DOŁĄCZ ZDJĘCIE:</div>
-                                <div class="file">
-                                    <div class="file__item">
-                                        <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image"
-                                            class="file__input">
-                                        <div class="file__button">WYBIERŻ</div>
-                                    </div>
-                                    <div id="formPreview" class="file__preview"></div>
-                                </div>
                             </div>
                             <div class="form__item">
                                 <div class="checkbox">
@@ -355,10 +340,12 @@
                                             usunięte po przesłaniu wyceny.</span></label>
                                 </div>
                             </div>
-                            <button type="submit" class="form__button">WYSLAĆ</button>
+                            <button type="button" id="sendMail" class="form__button">WYSLAĆ</button>
                         </form>
+                        <br>
+                        <div id="errorMess"></div>
                     </div>
-                </form>
+                </div>
 
 
 
@@ -445,8 +432,8 @@
                         <div class="subscribe__body">
                             <h4 class="subscribe__title">Zostaw nam swoją opinię.<br>Każdy szczegół jest ważny
                                 dla naszego zespółu!</h4>
-                            <form action="#" class="subscribe__form">
-                                <input autocomplete="off" type="email" required name="form[]"
+                            <form class="subscribe__form">
+                                <input autocomplete="off" type="text" required name="form[]"
                                     placeholder="Twoja opinię..." class="subscribe__input">
                                 <button type="submit" class="subscribe__button">WYSLAĆ</button>
                             </form>
@@ -610,14 +597,12 @@
     </div>
 
 
-    <!-- Подключаем jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!-- Подключаем слайдер Slick -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <!-- Подключаем Select -->
     <script src="js/select.js"></script>
-    <!-- Подключаем файл скриптов -->
     <script src="js/script.js"></script>
+    <script src="js/formMail.js"></script>
 </body>
 
 </html>
