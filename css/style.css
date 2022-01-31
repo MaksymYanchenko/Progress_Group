@@ -523,6 +523,7 @@ body {
     display: flex;
     height: 100%;
     flex-direction: column;
+    background-color: #fab702;
 }
 .item-practice__content {
     padding: 30px;
