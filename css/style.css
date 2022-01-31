@@ -556,7 +556,7 @@ body {
 .item-practice__image {
     display: block;
     padding: 0px 0px 60% 0px;
-    background: #fab702;
+    background-color: #fab702;
 }
 
 /*--------------------------------------------SLIDES-----------------------------------------------*/
